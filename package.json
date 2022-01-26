@@ -6,9 +6,11 @@
   "name": "portfolio",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "ejs-cli": "^2.2.3"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "ejs-cli -b ejs/ -f '!(_)*.ejs' -o ./html"
   },
   "repository": {
     "type": "git",
