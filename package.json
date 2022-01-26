@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "ejs": "^3.1.6",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "node-sass": "^7.0.1"
   },
   "name": "portfolio",
   "version": "1.0.0",
@@ -10,7 +11,8 @@
     "ejs-cli": "^2.2.3"
   },
   "scripts": {
-    "build": "ejs-cli -b ejs/ -f '!(_)*.ejs' -o ./html"
+    "build": "ejs-cli -b ejs/ -f '!(_)*.ejs' -o ./front",
+    "start": "http-server ./ -p 8080 -o -s"
   },
   "repository": {
     "type": "git",
