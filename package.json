@@ -1,18 +1,19 @@
 {
   "dependencies": {
     "ejs": "^3.1.6",
-    "express": "^4.17.2",
-    "node-sass": "^7.0.1"
+    "express": "^4.17.2"
   },
   "name": "portfolio",
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
-    "ejs-cli": "^2.2.3"
+    "ejs-cli": "^2.2.3",
+    "node-sass": "^7.0.1"
   },
   "scripts": {
     "build": "ejs-cli -b ejs/ -f '!(_)*.ejs' -o ./front",
-    "start": "http-server ./ -p 8080 -o -s"
+    "start": "http-server ./ -p 8080 -o -s",
+    "sass": "node-sass scss/ --output front/css --output-style compressed"
   },
   "repository": {
     "type": "git",
