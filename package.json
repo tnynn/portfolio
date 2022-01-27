@@ -13,9 +13,9 @@
   },
   "scripts": {
     "build": "npm-run-all ejs sass start",
-    "ejs": "ejs-cli -b ejs/ -f '!(_)*.ejs' -o ./front",
+    "ejs": "ejs-cli -b ejs/ -f '!(_)*.ejs' -o front/",
     "start": "http-server ./ -p 8080 -o -s",
-    "sass": "node-sass scss/ --output front/css --output-style compressed"
+    "sass": "node-sass scss/ --output front/css --output-style expanded"
   },
   "repository": {
     "type": "git",
