@@ -13,8 +13,9 @@
     "npm-run-all": "^4.1.5"
   },
   "scripts": {
-    "start": "npm run server & npm run watch:scss & npm run watch:ejs",
+    "start": "npm run preview & npm run watch:scss & npm run watch:ejs",
     "server": "http-server ./ -p 8080 -o -s",
+    "preview": "browser-sync start -s front/ -w front/*.html front/css/*.css front/js/*.js",
     "build": "npm-run-all build:*",
     "build:ejs": "ejs-cli -b ejs/ -f '!(_)*.ejs' -o front/",
     "build:scss": "node-sass scss/ --output front/css --output-style expanded",
