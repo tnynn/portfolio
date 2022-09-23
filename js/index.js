@@ -14,7 +14,7 @@ pf.constants = {
  * 郵便番号API
  */
 pf.postApi = function() {
-  var api = 'https://zipcloud.ibsnet.co.jp/api/search?zipcode='; // ?zipcode=を追加して問題１解決
+  var api = 'https://zipcloud.ibsnet.co.jp/api/search?zipcode='; // ?zipcode=を追加して謎１解決
   var error = $('#js-post').find('.error');
   var postInput = $('#js-post').find('#js-post-input');
   var postInputVal = postInput.val().replace('-', '');
@@ -24,7 +24,7 @@ pf.postApi = function() {
   var param = api + postInputVal; // ここで連結してajaxのurlに突っ込む
 
   /**
-   * 問題１
+   * 謎１
    * valをobjectに突っ込まないと200がかえってこない？
    * apiのurlとparamを連結して突っ込んだら解決
    * var param = {
@@ -72,6 +72,12 @@ pf.scrollFixed = function() {
   var headerHight = 120;
   var targetPosition = target.offset().top + headerHight;
   var winPosition = $(window).scrollTop();
+  
+  /**
+   * 謎２
+   * 中断からTOPに遷移したときにヘッダーがチラつく
+   * is-activeが削除→付与→削除になってしまう・・
+   */
   
   // 活性クラスの有無確認
   if(!header.hasClass(pf.constants.ACTIVE_CLASS)) {

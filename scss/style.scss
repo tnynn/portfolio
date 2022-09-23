@@ -121,9 +121,13 @@ body {
 .detail {
   .detail-item {
     margin-top: 10px;
+    line-height: 1.5;
     &:first-child {
       margin-top: 0;
     }
+  }
+  .detail-item_grey {
+    color: #777;
   }
   .detail-item_link {
     font-size: 30px;
@@ -137,7 +141,7 @@ body {
 .wrapper {
   width: 800px;
   margin: 0 auto;
-  padding: 30px;
+  padding-top: 30px;
   .wrapper-title{
     color: #fff;
     font-size: 30px;
@@ -148,6 +152,11 @@ body {
     padding: 20px;
     background-color: #fff;
   }
+  &.wrapper--pull {
+    .wrapper-contents {
+      margin-top: 0;
+    }
+  }
 }
 
 // 郵便番号
@@ -157,7 +166,7 @@ body {
     font-weight: bold;
   }
   .post-detail {
-    margin-top: 5px;
+    margin-top: 10px;
   }
   &.post--layout {
     margin-top: 15px;
@@ -217,13 +226,9 @@ body {
 
 // プルダウン
 .address_list {
-  width: 150px;
-  padding: 5px 14px;
+  width: 250px;
+  padding: 8px 14px;
   background-color: #9dc4f1;
   font-size: 12px;
   border-radius: 4px;
-  &::after {
-    content: '▼';
-    display: inline-block;
-  }
 }

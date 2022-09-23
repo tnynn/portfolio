@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! destyle.css v3.0.2 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
@@ -524,10 +523,15 @@ body {
 
 .detail .detail-item {
   margin-top: 10px;
+  line-height: 1.5;
 }
 
 .detail .detail-item:first-child {
   margin-top: 0;
+}
+
+.detail .detail-item_grey {
+  color: #777;
 }
 
 .detail .detail-item_link {
@@ -542,7 +546,7 @@ body {
 .wrapper {
   width: 800px;
   margin: 0 auto;
-  padding: 30px;
+  padding-top: 30px;
 }
 
 .wrapper .wrapper-title {
@@ -557,13 +561,17 @@ body {
   background-color: #fff;
 }
 
+.wrapper.wrapper--pull .wrapper-contents {
+  margin-top: 0;
+}
+
 .post .post-title {
   font-size: 18px;
   font-weight: bold;
 }
 
 .post .post-detail {
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .post.post--layout {
@@ -624,14 +632,9 @@ body {
 }
 
 .address_list {
-  width: 150px;
-  padding: 5px 14px;
+  width: 250px;
+  padding: 8px 14px;
   background-color: #9dc4f1;
   font-size: 12px;
   border-radius: 4px;
-}
-
-.address_list::after {
-  content: '▼';
-  display: inline-block;
 }
