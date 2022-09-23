@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- webフォント -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <!-- googleのcdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- json -->
+    <script src="../js/index.js"></script>
+    <title>portfolio!</title>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="wrapper-title">API</div>
+    <div class="wrapper-contents">
+      <div id="js-post" class="post">
+        <div class="post-title">郵便番号入力</div>
+        <div class="post-detail">
+          <input type="text" id="js-post-input" class="post_input" name="post" value="">
+          <button href="javascript:void(0)" id="js-post-action" class="post_btn post_btn--layout"><span class="post_btn-text">郵便番号検索</span></button>
+          <div class="error"></div>
+        </div>
+      </div>
+      <div class="post post--layout">
+        <div class="post-title">住所表示</div>
+        <div class="post-detail">
+          <div id="js-address" class="address">
+            <div class="address-text"><div class="address-text_title">都道府県：</div><input type="text" id="js-address-01" class="js-address-input address_input" name="address01" value=""></div>
+            <div class="address-text"><div class="address-text_title">市区町村：</div><input type="text" id="js-address-02" class="js-address-input address_input" name="address02" value=""></div>
+            <div class="address-text"><div class="address-text_title">町域：</div><input type="text" id="js-address-03" class="js-address-input address_input" name="address03" value=""></div>
+          </div>
+        </div>
+      </div>
+      <div class="post post--layout">
+        <div class="post-title">プルダウン</div>
+        <div class="post-detail">
+          <div id="js-address_list" class="address">
+            <div class="address-text">
+              <div class="address-text_title">都道府県：</div>
+              <select id="js-address_list-01" class="address_list" name="example">
+                <option>都道府県</option>
+              </select>
+            </div>
+            <div class="address-text">
+              <div class="address-text_title">都道府県：</div>
+              <select id="js-address_list-02" class="address_list" name="example">
+                <option>市区町村</option>
+              </select>
+            </div>
+            <div class="address-text">
+              <div class="address-text_title">町域：</div>
+              <select id="js-address_list-03" class="address_list" name="example">
+                <option>町域</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- footer.ejs -->
+  <%- include('./_footer.ejs') %>
+
+</body>
+</html>

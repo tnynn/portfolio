@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="../css/style.css">
     <!-- webフォント -->
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
-    <script src="../js/main.js"></script>
+    <!-- googleのcdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="../js/index.js"></script>
     <title>portfolio!</title>
 </head>
 <body>
 
   <div id="firstview" class="firstview">
-    <div class="title"><a href="#header">portfolio!</a></div>
+    <div class="title"><a href="#top" class="js-nav">portfolio!</a></div>
   </div>
 
   <!-- header.ejs -->
@@ -23,12 +25,24 @@
     <li class="main_list-item">
       <div id="top" class="contents">
         <div class="contents-title">TOP</div>
-        <div class="contents-detail">HTML/CSS/JSを使った作品を載せています</div>
+        <div class="contents-detail">
+          <ul class="detail">
+            <li class="detail-item">TOP・・・このページ/スムーススクロール/スクロール途中のヘッダー固定</li>
+            <li class="detail-item">API・・・APIを使用し作成</li>
+            <li class="detail-item">CAROUSEL・・・カルーセルでギャラリーを作成</li>
+          </ul>
+        </div>
       </div>
     </li>
     <li class="main_list-item">
       <div id="api" class="contents">
         <div class="contents-title">API</div>
+        <div class="contents-detail">
+          <ul class="detail">
+            <li class="detail-item">郵便番号APIを使用した住所検索</li>
+            <li class="detail-item"><a href="../post.html" class="detail-item_link">APIページへ飛ぶ</a></li>
+          </ul>
+        </div>
       </div>
     </li>
     <li class="main_list-item">

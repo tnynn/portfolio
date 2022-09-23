@@ -14,7 +14,7 @@
     "npm-run-all": "^4.1.5"
   },
   "scripts": {
-    "start": "npm run preview & npm run watch:scss & npm run watch:ejs",
+    "start": "npm run preview & npm run watch:scss & npm run watch:ejs & npm run watch:js",
     "server": "http-server ./ -p 8080 -o -s",
     "preview": "browser-sync start -s front/ -w front/*.html front/css/*.css front/js/*.js",
     "build": "npm-run-all build:*",
@@ -22,7 +22,8 @@
     "build:scss": "node-sass scss/ --output front/css --output-style expanded",
     "build:js": "cpx js/**.js front/js/",
     "watch:ejs": "chokidar \"ejs/\" -c \"npm run build:ejs\" --initial",
-    "watch:scss": "chokidar \"scss/\" -c \"npm run build:scss\" --initial"
+    "watch:scss": "chokidar \"scss/\" -c \"npm run build:scss\" --initial",
+    "watch:js": "chokidar \"js/\" -c \"npm run build:js\" --initial"
   },
   "repository": {
     "type": "git",

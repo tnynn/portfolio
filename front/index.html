@@ -7,20 +7,33 @@
     <link rel="stylesheet" href="../css/style.css">
     <!-- webフォント -->
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
-    <script src="../js/main.js"></script>
+    <!-- googleのcdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="../js/index.js"></script>
     <title>portfolio!</title>
 </head>
 <body>
 
   <div id="firstview" class="firstview">
-    <div class="title"><a href="#header">portfolio!</a></div>
+    <div class="title"><a href="#top" class="js-nav">portfolio!</a></div>
   </div>
 
   <!-- header.ejs -->
   <div id="header" class="header">
   <div class="header-contents">
-  <div class="title"><a href="#firstview" class="js-nav">portfolio!</a></div>
+  <h1 class="title"><a href="#firstview" class="js-nav">portfolio!</a></h1>
     <ul id="js-nav" class="menu">
+      <li class="menu-item"><a href="#top" class="js-nav menu-item_link">TOP</a></li>
+      <li class="menu-item"><a href="#api" class="js-nav menu-item_link">API</a></li>
+      <li class="menu-item"><a href="#carousel" class="js-nav menu-item_link">CAROUSEL</a></li>
+    </ul>
+  </div>
+</div>
+<!-- 非表示ヘッダー -->
+<div id="header_fixed" class="header header--fixed">
+  <div class="header-contents">
+  <h1 class="title"><a href="#firstview" class="js-nav">portfolio!</a></h1>
+    <ul class="menu">
       <li class="menu-item"><a href="#top" class="js-nav menu-item_link">TOP</a></li>
       <li class="menu-item"><a href="#api" class="js-nav menu-item_link">API</a></li>
       <li class="menu-item"><a href="#carousel" class="js-nav menu-item_link">CAROUSEL</a></li>
@@ -32,12 +45,24 @@
     <li class="main_list-item">
       <div id="top" class="contents">
         <div class="contents-title">TOP</div>
-        <div class="contents-detail">HTML/CSS/JSを使った作品を載せています</div>
+        <div class="contents-detail">
+          <ul class="detail">
+            <li class="detail-item">TOP・・・このページ/スムーススクロール/スクロール途中のヘッダー固定</li>
+            <li class="detail-item">API・・・APIを使用し作成</li>
+            <li class="detail-item">CAROUSEL・・・カルーセルでギャラリーを作成</li>
+          </ul>
+        </div>
       </div>
     </li>
     <li class="main_list-item">
       <div id="api" class="contents">
         <div class="contents-title">API</div>
+        <div class="contents-detail">
+          <ul class="detail">
+            <li class="detail-item">郵便番号APIを使用した住所検索</li>
+            <li class="detail-item"><a href="../post.html" class="detail-item_link">APIページへ飛ぶ</a></li>
+          </ul>
+        </div>
       </div>
     </li>
     <li class="main_list-item">
