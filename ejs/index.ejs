@@ -5,19 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <!-- webフォント -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <script src="../js/main.js"></script>
-    <title>おもちカフェ</title>
+    <title>portfolio!</title>
 </head>
 <body>
 
-  <!-- ヘッダーejs -->
-  <%- include('./_header.ejs') %>
-
-  <div class="main">
-    <div class="main-text">テキストテスト</div>
+  <div id="firstview" class="firstview">
+    <div class="title"><a href="#header">portfolio!</a></div>
   </div>
 
-  <!-- フッターejs -->
+  <!-- header.ejs -->
+  <%- include('./_header.ejs') %>
+
+  <ul class="main_list">
+    <li class="main_list-item">
+      <div id="top" class="contents">
+        <div class="contents-title">TOP</div>
+        <div class="contents-detail">HTML/CSS/JSを使った作品を載せています</div>
+      </div>
+    </li>
+    <li class="main_list-item">
+      <div id="api" class="contents">
+        <div class="contents-title">API</div>
+      </div>
+    </li>
+    <li class="main_list-item">
+      <div id="carousel" class="contents">
+        <div class="contents-title">CAROUSEL</div>
+      </div>
+    </li>
+  </ul>
+
+  <!-- footer.ejs -->
   <%- include('./_footer.ejs') %>
 
 </body>
